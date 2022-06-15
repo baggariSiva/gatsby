@@ -3,6 +3,26 @@
 
 <a href="https://dash.elest.io/deploy?source=cicd&social=Github&url=https://github.com/elestio-examples/gatsby"><img src="src\images\deploy-on-elestio.png" alt="Deploy on elest.io" width="180px" /></a>
 
+
+# Gatsby!
+
+This is a very basic example of a simple Gatsby app.
+
+
+Clone this [elestio-examples/gatsby](https://github.com/elestio-examples/gatsby) 
+
+```
+git clone https://github.com/elestio-examples/gatsby.git
+```
+Change into project directory.
+
+```
+npm install
+npm run serve
+```
+
+This starts your app in development mode, make the changes and push.
+
 Example application and CI/CD pipeline showing how to deploy a Gatsby website to elestio.
 
 <img src="src\images\gatsby.png" alt="screenshot of the Gatsby app" width="100%" />
