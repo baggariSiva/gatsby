@@ -1,36 +1,43 @@
 # Gatsby example demo CI/CD pipeline
 
+<a href="https://dash.elest.io/deploy?source=cicd&social=Github&url=https://github.com/elestio-examples/gatsby"><img src="src\images\deploy-on-elestio.png" alt="Deploy on Elest.io" width="180px" /></a>
 
-<a href="https://dash.elest.io/deploy?source=cicd&social=Github&url=https://github.com/elestio-examples/gatsby"><img src="src\images\deploy-on-elestio.png" alt="Deploy on elest.io" width="180px" /></a>
+This is a very basic example of a simple Gatsby App.
+
+<img src="src\images\gatsby.png" alt="screenshot of the Gatsby app" width="100%" />
+
+# Steps to clone this repository and run locally.
 
 
-# Gatsby!
-
-This is a very basic example of a simple Gatsby app.
-
-
-Clone this [elestio-examples/gatsby](https://github.com/elestio-examples/gatsby) 
+### Step 1: Clone this repository.
 
 ```
 git clone https://github.com/elestio-examples/gatsby.git
 ```
-Change into project directory.
+### Step 2: Go to project folder.
+
+```
+cd gatsby
+```
+
+### Step 3: Install dependencies.
 
 ```
 npm install
+```
+
+### Step 4: Run your app in dev mode.
+
+```
 npm run serve
 ```
 
-This starts your app in development mode, make the changes and push.
+### Step 5: Make some changes and push.
 
-Example application and CI/CD pipeline showing how to deploy a Gatsby website to elestio.
-
-<img src="src\images\gatsby.png" alt="screenshot of the Gatsby app" width="100%" />
 
 ## CI/CD on Elestio
 
-Fork this repository to create your own copy that you can modify and use in a CI/CD pipeline
-
+Showing here how to deploy to Elestio.
 
 # Steps to create CI/CD pipeline on elestio
 
@@ -46,19 +53,24 @@ We have three different types of deployment method
 - Gitlab
 - Docker compose
 
-But for these Gatsby website examples, you can choose GitHub as your deployment method.
+But for this Gatsby Template, you can choose GitHub as your deployment method.
 
 ### Step 3: Authentication
 
-Select Clone in step at step Git Repository and select Gatsby template for creating a repository in your git account after that authenticate with Git by clicking on Continue with Github button and authorize elestio to access git then you can rename you repository name if you want.
+Select Clone in step at step Git Repository and select Gatsby template for creating a repository in your git account after that authenticate with Git by clicking on
+Continue with Github button and authorize elestio to access git then you can rename you repository name if you want.
 
-Else If you forked the repo then you can click on the Continue with GitHub button and authorize elestio to access the git repo then you can select the Gatsby repo otherwise you can directly insert a git repo URL to deploy the Gatsby App.
+Else If you forked the repo then you can click on the Continue with GitHub button and authorize elestio to access the git repo then you can select the Gatsby repo otherwise you can directly insert a git repo URL to deploy the Gatsby application.
 
 ### Step 4: Configuration
 
 After selecting a repo or inserting a URL it will auto-filled all the desired configurations using the elestio.yml/elestio.json file.
 
-You can also manually customize the Configure your application, Reverse proxy configuration, and Environment variables.
+You can also manually customize the Configure your application. 
+
+Select your runtime and its version, run & build commands.
+
+Reverse proxy configuration, Volume Configuration, Exposed Ports Configuration and Environment variables.
 
 ### Step 5: Choose Deployment Targets
 
@@ -107,3 +119,5 @@ Now after following all the above steps you can click on the button **Create Ci/
 It will take a few seconds to deploy your pipeline on elestio.
 
 For each pipeline deployed on elestio will create a cname for it. but if you want your custom domain then you can configure it inside the target details.
+
+After Pipeline is deployed you can able to view the app by visiting the pipeline domain.
